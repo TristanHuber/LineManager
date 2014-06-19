@@ -1,4 +1,4 @@
 LineManager
 ===========
 
-learning web dev by writing a page for drawing and manipulating lines.
+learning HTML5 CSS3 and moar jquery by writing a page for drawing and manipulating lines.
