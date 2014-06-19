@@ -3,11 +3,11 @@
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 70%;
+  min-width: 500px;
+  width: 0%;
 }
 
 canvas {
-  width: 100%;
   background-color: #FFFFFF;
 }
 
