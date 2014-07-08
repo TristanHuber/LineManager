@@ -1,10 +1,21 @@
-var drawing = false;
+var drawing;
+var line;
 
 $(function(){
+
   $('#canvas').click(onebox);
-  $('#canvas').mousedown(function (e) { drawing = true; });
+  $('#canvas').mousedown(
+    function (e) {
+      var canvas = e.target;
+      var ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      drawing = true;
+    });
   $('#canvas').mousemove(onebox);
-  $('#canvas').mouseup(function(e) { drawing = false; });
+  $('#canvas').mouseup(
+    function (e) {
+      drawing = false;
+    });
 });
 
 function drawBox(x,y){
@@ -18,9 +29,12 @@ function onebox(e){
 
     var canvas = e.target;
     jcanvas = $(canvas);
+    var ctx=canvas.getContext('2d');
   
     x = e.pageX - jcanvas.offset().left;
     y = e.pageY - jcanvas.offset().top;
-    drawBox(x, y);  
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    
   }
 }
