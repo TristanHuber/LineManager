@@ -9,12 +9,32 @@
   </head>
 
   <body>
+    <div id="control">
+      <fieldset id="curvature">
+        <span class="legend">Curvature</span>
+        <button id="linear">Linear</button> 
+        <button id="quadratic">Quadratic</button>
+        <button id="cubic">Cubic</button>
+      </fieldset>
+
+      <fieldset id="resolution">
+        <span class="legend">Resolution</span>
+        Blur<input type="range" min="0" max="14"></input>
+        Width<input type="range" min="0" max="50"></input>
+      </fieldset>
+      
+    </div>
+
     <div id="content">
       <canvas id="canvas" width="500px" height="400px"> 
         Your browser does not support HTML5 canvas tag :(
       </canvas>
       <div id="buttons">
       </div>
+    </div>
+
+    <div id="info">
+      information about what's going on
     </div>
 
   </body>
